@@ -113,7 +113,7 @@ export default function History() {
             {/* Filters Section */}
             <div className={`space-y-4 md:space-y-0 md:flex md:items-center md:gap-4 ${showFilters ? 'block' : 'hidden md:flex'}`}>
               <div className="flex-1 min-w-[240px]">
-                <DatePickerWithRange date={date} setDate={setDate} />
+                {/* <DatePickerWithRange date={date} setDate={setDate} /> */}
               </div>
               <Select value={numRecords} onValueChange={setNumRecords}>
                 <SelectTrigger className="w-[180px]">

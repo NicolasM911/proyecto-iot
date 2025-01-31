@@ -104,7 +104,7 @@ export function SensorChart({
                               {title}
                             </span>
                             <span className="font-bold text-muted-foreground">
-                              {valueFormatter(payload[0].value)}
+                              {/* {valueFormatter(payload[0].value)} */}
                               {unit}
                             </span>
                           </div>
