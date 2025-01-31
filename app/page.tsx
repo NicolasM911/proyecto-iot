@@ -36,20 +36,17 @@ export default function Home() {
     const sensorRef = query(ref(database, 'sensorData'), limitToLast(100)); // Limitar la consulta a los últimos 100 registros
     onValue(sensorRef, (snapshot) => {
       const newData = snapshot.val();
-      // console.log("Raw data from Firebase:", newData); // Log de depuración para revisar los datos crudos
       if (newData) {
         const formattedData: SensorData[] = Object.keys(newData).map((key) => ({
           time: newData[key].timestamp,
           temperature: newData[key].temperature,
           humidity: newData[key].humidity,
         }));
-        // console.log("Formatted data:", formattedData); // Log de depuración para revisar los datos formateados
-        // console.log("Number of data points:", formattedData.length); // Log de depuración para la cantidad de datos
-        setData(formattedData); // Mantener los datos en orden cronológico
+        setData(formattedData);
         setCurrentTemp(formattedData[formattedData.length - 1].temperature);
         setCurrentHumidity(formattedData[formattedData.length - 1].humidity);
       }
-      setLoading(false); // Finalizar la carga
+      setLoading(false);
     });
 
     return () => {
@@ -72,6 +69,8 @@ export default function Home() {
     return null; // Prevent hydration issues by not rendering until client-side
   }
 
+  const lastTimestamp = data.length > 0 ? data[data.length - 1].time : null;
+
   return (
     <div className="flex min-h-screen flex-col">
       <Header onMenuClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
@@ -80,6 +79,10 @@ export default function Home() {
         <main className="flex-1 p-6">
           <div className="container mx-auto space-y-6">
             <h1 className="text-3xl font-bold">Dashboard</h1>
+
+            {lastTimestamp && (
+              <p className="text-lg dark:text-white mt-2">Ultimo registro almacenado: {lastTimestamp}</p>
+            )}
 
             {loading ? (
               <div className="flex justify-center items-center h-64">

@@ -52,7 +52,7 @@ export function SensorStats({ temperature, humidity }: SensorStatsProps) {
             {getChangeDisplay(tempChange)}
           </div>
           <p className="text-xs text-muted-foreground">
-            Current reading
+            Ultimo registro
           </p>
         </CardContent>
       </Card>
@@ -67,7 +67,7 @@ export function SensorStats({ temperature, humidity }: SensorStatsProps) {
             {getChangeDisplay(humidityChange)}
           </div>
           <p className="text-xs text-muted-foreground">
-            Current reading
+            Ultimo registro
           </p>
         </CardContent>
       </Card>
