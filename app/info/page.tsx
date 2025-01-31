@@ -27,7 +27,7 @@ const InfoPage: React.FC = () => {
                         {/* Imagen Principal */}
                         <div className="flex justify-center mb-8">
                             <motion.img
-                                src="https://th.bing.com/th/id/R.e318bbbf735281fb19619fe14e735b2d?rik=AsU7ZFHB%2fLC17w&pid=ImgRaw&r=0" // Reemplaza con la URL de tu imagen
+                                src="/images/forraje1.jpeg"// Reemplaza con la URL de tu imagen
                                 alt="Cultivo de Forraje Verde Hidropónico"
                                 className="w-full md:w-3/4 lg:w-2/3 rounded-lg shadow-lg border-2 border-green-300"
                                 initial={{ scale: 1 }}
@@ -61,9 +61,9 @@ const InfoPage: React.FC = () => {
                         {/* Imágenes Adicionales */}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                             {[
-                                'https://hidrosystems.org/wp-content/uploads/2022/01/forrajev.jpg',
-                                'https://homkin.ru/wp-content/uploads/2018/07/pig105.jpg',
-                                'https://th.bing.com/th/id/OIP.2V68zZ2GI3WOGxVv1h-P3wHaEO?rs=1&pid=ImgDetMain'
+                                '/images/forraje2.jpg',
+                                '/images/forraje3.jpg',
+                                '/images/forraje4.jpeg',
                             ].map((src, index) => (
                                 <div className="flex justify-center" key={index}>
                                     <motion.img
@@ -96,7 +96,7 @@ const InfoPage: React.FC = () => {
                             {/* Contenedor para centrar la imagen */}
                             <div className="flex justify-center mb-12">
                                 <motion.img
-                                    src="https://th.bing.com/th/id/OIP.Ta9y6G58iBfriS0l2du3QAHaHa?w=900&h=900&rs=1&pid=ImgDetMain" // Reemplaza con la URL de tu imagen
+                                    src="/images/forraje5.jpeg" // Reemplaza con la URL de tu imagen
                                     alt="Implementación del IoT en FVH"
                                     className="w-full md:w-1/2 lg:w-1/3 rounded-lg shadow-lg border-2 border-green-300"
                                     initial={{ scale: 1 }}
@@ -128,9 +128,9 @@ const InfoPage: React.FC = () => {
                             {/* Imágenes de Beneficios del IoT */}
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                                 {[
-                                    'https://th.bing.com/th/id/R.44437bced503ea006b5d8100e8ac1bfb?rik=XjRydcyjiJqJLw&riu=http%3a%2f%2fwww.ioiautomation.com%2fassets%2fimages%2fag1-2.jpg&ehk=Z7Mh%2b0YnEIbOEYeyKM3Vktg%2fL0WBWHe7d%2f%2bkkchWFWE%3d&risl=&pid=ImgRaw&r=0',
-                                    'https://th.bing.com/th/id/OIP.kLGBf5LuQDDmQc6wWQ0DZgHaEi?rs=1&pid=ImgDetMain',
-                                    'https://www.paradavisual.com/wp-content/uploads/2021/05/Que-es-una-plataforma-de-gestion-de-conectividad-de-IoT-y-por-que-necesita-una-u-1024x656.jpg'
+                                    '/images/forraje6.jpeg',
+                                    '/images/forraje7.jpeg',
+                                    '/images/forraje8.jpg',
                                 ].map((src, index) => (
                                     <div className="flex justify-center" key={index}>
                                         <motion.img
