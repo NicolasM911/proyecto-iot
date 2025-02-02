@@ -78,7 +78,7 @@ export default function Home() {
         <Sidebar isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
         <main className="flex-1 p-6">
           <div className="container mx-auto space-y-6">
-            <h1 className="text-3xl font-bold">Dashboard</h1>
+            <h1 className="text-3xl font-bold">Panel</h1>
 
             {lastTimestamp && (
               <p className="text-lg dark:text-white mt-2">Ultimo registro almacenado: {lastTimestamp}</p>
@@ -97,7 +97,7 @@ export default function Home() {
 
                 <div className="grid gap-4 md:grid-cols-2">
                   <SensorChart
-                    title="Temperature"
+                    title="Temperatura"
                     data={data}
                     dataKey="temperature"
                     gradient={{
@@ -108,7 +108,7 @@ export default function Home() {
                     valueFormatter={(value) => `${value.toFixed(1)}`}
                   />
                   <SensorChart
-                    title="Humidity"
+                    title="Humedad"
                     data={data}
                     dataKey="humidity"
                     gradient={{
@@ -122,14 +122,14 @@ export default function Home() {
                 <div className="grid gap-4 md:grid-cols-2">
                   <GaugeChart
                     value={Math.round(currentTemp * 10) / 10}
-                    title="Current Temperature"
+                    title="Temperature actual"
                     unit="°C"
                     maxValue={40}
                     colorClass="text-red-500"
                   />
                   <GaugeChart
                     value={Math.round(currentHumidity)}
-                    title="Current Humidity"
+                    title="Humedad actual"
                     unit="%H"
                     maxValue={100}
                     colorClass="text-blue-500"
