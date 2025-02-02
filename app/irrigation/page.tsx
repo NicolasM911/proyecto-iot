@@ -13,6 +13,7 @@ export default function Irrigations() {
     id: string;
     timestamp: string;
     duration: number;
+    source: string;
   }>>([]);
 
   useEffect(() => {
@@ -25,6 +26,7 @@ export default function Irrigations() {
         id: Date.now().toString(),
         timestamp: new Date().toISOString(),
         duration: 10,
+        source: 'Botón Web'
       };
       setIrrigationEvents((prev) => [newEvent, ...prev]);
     }

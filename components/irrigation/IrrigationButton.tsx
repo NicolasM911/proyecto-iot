@@ -46,19 +46,19 @@ export function IrrigationButton({ onStateChange }: IrrigationButtonProps) {
         disabled={isActive}
         size="icon"
         className={cn(
-          'relative w-32 h-32 md:w-40 md:h-40 rounded-full transition-all duration-500',
+          ' relative w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-blue-500 transition-all duration-500',
           isActive ? 'bg-blue-500 hover:bg-blue-600' : 'bg-muted hover:bg-muted/80'
         )}
       >
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
           <Droplets className={cn(
-            'w-12 h-12 md:w-16 md:h-16 transition-all duration-500',
+            'w-12 h-12 md:w-16 md:h-16 transition-all duration-500 ',
             isActive ? 'text-white animate-bounce' : 'text-muted-foreground'
           )} />
           {isActive ? (
             <span className="text-xl md:text-2xl font-bold text-white">{countdown}s</span>
           ) : (
-            <span className="text-sm md:text-base font-medium text-muted-foreground">
+            <span className="text-sm md:text-base font-medium text-muted-foreground text-blue-500">
               Activar Riego
             </span>
           )}

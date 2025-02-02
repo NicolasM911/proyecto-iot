@@ -15,6 +15,7 @@ interface IrrigationEvent {
   id: string;
   timestamp: string;
   duration: number;
+  source: string;
 }
 
 interface IrrigationHistoryProps {
@@ -28,12 +29,13 @@ export function IrrigationHistory({ events }: IrrigationHistoryProps) {
         <CardTitle>Historial de Riego</CardTitle>
       </CardHeader>
       <CardContent>
-        <ScrollArea className="h-[200px] w-full">
+        <ScrollArea className="h-[400px] w-full">
           <Table>
             <TableHeader>
               <TableRow>
                 <TableHead className="w-[180px]">Fecha</TableHead>
-                <TableHead>Duración</TableHead>
+                <TableHead className="w-[180px]">Duración</TableHead>
+                <TableHead>Fuente</TableHead> {/* Agregar columna para la fuente */}
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -43,6 +45,7 @@ export function IrrigationHistory({ events }: IrrigationHistoryProps) {
                     {new Date(event.timestamp).toLocaleString()}
                   </TableCell>
                   <TableCell>{event.duration} segundos</TableCell>
+                  <TableCell>{event.source}</TableCell> {/* Mostrar la fuente */}
                 </TableRow>
               ))}
             </TableBody>
