@@ -120,9 +120,9 @@ const InfoPage: React.FC = () => {
                             <ul className="list-disc list-inside text-lg  dark:text-white mx-auto md:w-2/3 lg:w-1/2">
                                 <li className="mb-2">Monitoreo en tiempo real de las condiciones ambientales.</li>
                                 <li className="mb-2">Optimización del uso del agua con riego automatizado.</li>
-                                <li className="mb-2">Mayor eficiencia en la producción de foraje con menos recursos.</li>
-                                <li className="mb-2">Control de plagas y enfermedades a través de análisis de datos.</li>
-                                <li className="mb-2">Aumento en la rentabilidad mediante la reducción de costos operativos.</li><br></br>
+                                <li className="mb-2">Mayor eficiencia en la producción de forraje con menos recursos.</li>
+                                {/* <li className="mb-2">Control de plagas y enfermedades a través de análisis de datos.</li>
+                                <li className="mb-2">Aumento en la rentabilidad mediante la reducción de costos operativos.</li><br></br> */}
                             </ul>
 
                             {/* Imágenes de Beneficios del IoT */}

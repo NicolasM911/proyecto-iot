@@ -40,35 +40,30 @@ export function IrrigationButton({ onStateChange }: IrrigationButtonProps) {
   };
 
   return (
-    <Button
-      onClick={handleClick}
-      disabled={isActive}
-      size="lg"
-      className={cn(
-        'relative w-full h-16 transition-all duration-500',
-        isActive ? 'bg-blue-500 hover:bg-blue-600' : 'bg-muted hover:bg-muted/80'
-      )}
-    >
-      <div className="absolute inset-0 flex items-center justify-center">
-        <Droplets className={cn(
-          'w-6 h-6 transition-all duration-500',
-          isActive ? 'text-white animate-bounce' : 'text-muted-foreground'
-        )} />
-      </div>
-      <div className={cn(
-        'absolute inset-0 flex items-center justify-center transition-opacity duration-300',
-        isActive ? 'opacity-100' : 'opacity-0'
-      )}>
-        <div className="flex items-center space-x-2">
-          <span className="text-white font-bold">{countdown}s</span>
+    <div className="flex items-center justify-center w-full">
+      <Button
+        onClick={handleClick}
+        disabled={isActive}
+        size="icon"
+        className={cn(
+          'relative w-32 h-32 md:w-40 md:h-40 rounded-full transition-all duration-500',
+          isActive ? 'bg-blue-500 hover:bg-blue-600' : 'bg-muted hover:bg-muted/80'
+        )}
+      >
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+          <Droplets className={cn(
+            'w-12 h-12 md:w-16 md:h-16 transition-all duration-500',
+            isActive ? 'text-white animate-bounce' : 'text-muted-foreground'
+          )} />
+          {isActive ? (
+            <span className="text-xl md:text-2xl font-bold text-white">{countdown}s</span>
+          ) : (
+            <span className="text-sm md:text-base font-medium text-muted-foreground">
+              Activar Riego
+            </span>
+          )}
         </div>
-      </div>
-      <span className={cn(
-        'ml-2 transition-opacity duration-300',
-        isActive ? 'opacity-0' : 'opacity-100'
-      )}>
-        Activar Riego
-      </span>
-    </Button>
+      </Button>
+    </div>
   );
 }

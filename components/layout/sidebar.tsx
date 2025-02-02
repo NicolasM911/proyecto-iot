@@ -13,12 +13,13 @@ interface SidebarProps {
 }
 
 const sidebarItems = [
-  { name: 'Forraje', href: '/info', icon: Info }, 
-  { name: 'Dashboard', href: '/', icon: LayoutDashboard },
+  { name: 'Información Forraje', href: '/info', icon: Info }, 
+//  { name: 'Proyecto', href: '/infoproject', icon: Bell },
+  { name: 'Panel', href: '/', icon: LayoutDashboard },
   { name: 'Riego', href: '/irrigation', icon: Droplets},
-  { name: 'History', href: '/history', icon: History },
+  { name: 'Historial', href: '/history', icon: History },
   // { name: 'Alerts', href: '/alerts', icon: Bell },
-  { name: 'Settings', href: '/settings', icon: Settings },
+  // { name: 'Settings', href: '/settings', icon: Settings },
 ];
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
@@ -57,7 +58,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   variant={pathname === item.href ? 'secondary' : 'ghost'}
                   className={cn(
                     'justify-start',
-                    pathname === item.href && 'bg-muted font-medium'
+                    pathname === item.href && 'bg-gradient-to-r from-green-400 to-green-600'
                   )}
                   asChild
                   onClick={onClose}

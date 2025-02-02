@@ -87,7 +87,7 @@ export default function History() {
           <div className="container mx-auto space-y-4">
             {/* Header and Main Controls */}
             <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-between md:items-center">
-              <h1 className="text-2xl md:text-3xl font-bold">Sensor History</h1>
+              <h1 className="text-2xl md:text-3xl font-bold">Historial de sensores</h1>
               <div className="flex flex-wrap gap-2">
                 <Button
                   variant="outline"

@@ -21,7 +21,7 @@ export function Header({ onMenuClick }: HeaderProps) {
         >
           <Menu className="h-5 w-5" />
         </Button>
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 px-4">
           <Link href="/" className="flex items-center space-x-2">
             <Droplet className="h-6 w-6" />
             <span className="font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
