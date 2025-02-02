@@ -122,7 +122,7 @@ export default function Home() {
                 <div className="grid gap-4 md:grid-cols-2">
                   <GaugeChart
                     value={Math.round(currentTemp * 10) / 10}
-                    title="Temperature actual"
+                    title="Temperatura actual"
                     unit="°C"
                     maxValue={40}
                     colorClass="text-red-500"
