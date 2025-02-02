@@ -105,7 +105,7 @@ export default function History() {
                   className="ml-auto md:ml-0"
                 >
                   <Download className="h-4 w-4 mr-2" />
-                  Export
+                  Descargar
                 </Button>
               </div>
             </div>
@@ -120,10 +120,10 @@ export default function History() {
                   <SelectValue placeholder="Number of records" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="10">10 records</SelectItem>
-                  <SelectItem value="20">20 records</SelectItem>
-                  <SelectItem value="50">50 records</SelectItem>
-                  <SelectItem value="100">100 records</SelectItem>
+                  <SelectItem value="10">10 registros</SelectItem>
+                  <SelectItem value="20">20 registros</SelectItem>
+                  <SelectItem value="50">50 registros</SelectItem>
+                  <SelectItem value="100">100 registros</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -135,9 +135,9 @@ export default function History() {
                   <Table>
                     <TableHeader className="sticky top-0 bg-background z-10">
                       <TableRow>
-                        <TableHead className="w-[200px] md:w-auto">Time</TableHead>
-                        <TableHead>Temperature (°C)</TableHead>
-                        <TableHead>Humidity (%)</TableHead>
+                        <TableHead className="w-[200px] md:w-auto">Fecha</TableHead>
+                        <TableHead>Temperatura (°C)</TableHead>
+                        <TableHead>Humedad (%)</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>

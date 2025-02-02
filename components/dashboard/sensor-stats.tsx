@@ -43,7 +43,7 @@ export function SensorStats({ temperature, humidity }: SensorStatsProps) {
     <div className="grid gap-4 md:grid-cols-2">
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Temperature</CardTitle>
+          <CardTitle className="text-sm font-medium">Temperatura</CardTitle>
           <Thermometer className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
@@ -58,7 +58,7 @@ export function SensorStats({ temperature, humidity }: SensorStatsProps) {
       </Card>
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Humidity</CardTitle>
+          <CardTitle className="text-sm font-medium">Humedad</CardTitle>
           <Droplets className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
