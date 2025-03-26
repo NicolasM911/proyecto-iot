@@ -47,7 +47,7 @@ export default function Irrigations() {
             
             <div className="grid gap-4 md:grid-cols-2">
               <div className="space-y-4">
-                <h2 className="text-xl font-semibold">Control Manual</h2>
+                <h2 className="text-xl font-semibold"></h2>
                 <IrrigationButton onStateChange={handleIrrigationStateChange} />
               </div>
               <IrrigationHistory events={irrigationEvents} />
