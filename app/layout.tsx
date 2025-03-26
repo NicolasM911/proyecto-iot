@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Proyecto IoT',
   description: 'Monitor temperature and humidity sensors in real-time',
-   icons: '/gota.png',
+  icons: '/agua.png',
 };
 
 export default function RootLayout({
