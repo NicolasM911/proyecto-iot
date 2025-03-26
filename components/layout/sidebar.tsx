@@ -13,7 +13,7 @@ interface SidebarProps {
 }
 
 const sidebarItems = [
-  { name: 'Información Forraje', href: '/info', icon: Info }, 
+  // { name: 'Información Forraje', href: '/info', icon: Info }, 
 //  { name: 'Proyecto', href: '/infoproject', icon: Bell },
   { name: 'Panel', href: '/', icon: LayoutDashboard },
   { name: 'Riego', href: '/irrigation', icon: Droplets},
