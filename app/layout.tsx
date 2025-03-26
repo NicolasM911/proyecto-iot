@@ -8,8 +8,9 @@ import { Footer } from '@/components/layout/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Proyecto',
+  title: 'Proyecto IoT',
   description: 'Monitor temperature and humidity sensors in real-time',
+   icons: '/gota.png',
 };
 
 export default function RootLayout({
