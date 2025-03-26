@@ -39,7 +39,7 @@ export default function History() {
     setMounted(true);
     
     // Obtener datos desde Firebase
-    const sensorRef = query(ref(database, 'sensorData'), limitToLast(100)); // Limitar los últimos 100 registros
+    const sensorRef = query(ref(database, 'sensordata'), limitToLast(100)); // Limitar los últimos 100 registros
     onValue(sensorRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {

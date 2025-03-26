@@ -32,27 +32,31 @@ export default function Home() {
 
   useEffect(() => {
     setMounted(true);
-
-    const sensorRef = query(ref(database, 'sensorData'), limitToLast(100)); // Limitar la consulta a los últimos 100 registros
-    onValue(sensorRef, (snapshot) => {
+  
+    const sensorRef = query(ref(database, 'sensordata'), limitToLast(100));
+    const unsubscribe = onValue(sensorRef, (snapshot) => {
       const newData = snapshot.val();
+      console.log("Datos recibidos desde Firebase:", newData); // <-- Verifica los datos que llegan
+  
       if (newData) {
         const formattedData: SensorData[] = Object.keys(newData).map((key) => ({
           time: newData[key].timestamp,
           temperature: newData[key].temperature,
           humidity: newData[key].humidity,
         }));
-        setData(formattedData);
+  
+        console.log("Datos formateados:", formattedData); // <-- Verifica la transformación
+  
+        setData([...formattedData]); // <-- Asegura que React detecte el cambio de estado
         setCurrentTemp(formattedData[formattedData.length - 1].temperature);
         setCurrentHumidity(formattedData[formattedData.length - 1].humidity);
       }
       setLoading(false);
     });
-
-    return () => {
-      // Limpiar la suscripción a Firebase si es necesario
-    };
+  
+    return () => unsubscribe(); // Limpia la suscripción cuando el componente se desmonta
   }, []);
+  
 
   const handleIrrigationStateChange = (isActive: boolean) => {
     if (isActive) {
